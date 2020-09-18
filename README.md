@@ -49,3 +49,30 @@ body 为更新的数据内容
 
 4、
 实现⼀个 express 中间件，实现⽇志打印功能
+
+5、
+使⽤ mongoose 创建⼀个名为 project 的 schema ,其结构为
+ name: {
+ index: true,
+ type: String,
+ type: String,
+ required: '{PATH} is required!'
+ },
+ sortName: String, //简称
+ description: String, //描述
+ address: {
+ state: String,
+ province: String,
+ city: String,
+ area: String,
+ road: String,
+ },
+ startAt: Date, //开⼯时间
+ endAt: Date, //竣⼯⽇期
+ 
+封装 CURD 接⼝，实现 创建 ， 更新 ， 获取 ， 删除 接⼝ 实现以下⽹络请求接⼝
+POST /api/projects // 创建⼀条projects信息
+GET /api/projects/:id // 获取指定id的project信息
+PUT /api/projects/:id // 更新指定id的project信息
+DELETE /api/projects/:id // 删除指定id的project信息
+GET /api/projects // 获取所有projects信息
