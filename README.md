@@ -41,39 +41,39 @@ overwrite 控制是否覆盖原有内容
 body 为更新的数据内容  
 接⼝说明：调⽤系统库更新⽂件，并将更新后的数据返回   
 接⼝数据格式为json   
-返回的数据格式为
-{
- filePath:String,
- data:String
-}
+返回的数据格式为   
+{   
+ filePath:String,  
+ data:String  
+}  
 
-4、
-实现⼀个 express 中间件，实现⽇志打印功能
+4、  
+实现⼀个 express 中间件，实现⽇志打印功能  
 
-5、
-使⽤ mongoose 创建⼀个名为 project 的 schema ,其结构为
- name: {
- index: true,
- type: String,
- type: String,
- required: '{PATH} is required!'
- },
- sortName: String, //简称
- description: String, //描述
- address: {
- state: String,
- province: String,
- city: String,
- area: String,
- road: String,
- },
- startAt: Date, //开⼯时间
- endAt: Date, //竣⼯⽇期
+5、  
+使⽤ mongoose 创建⼀个名为 project 的 schema ,其结构为  
+ name: {  
+ index: true,  
+ type: String,  
+ type: String,  
+ required: '{PATH} is required!'  
+ },  
+ sortName: String, //简称  
+ description: String, //描述  
+ address: {  
+ state: String,   
+ province: String,  
+ city: String,  
+ area: String,  
+ road: String,  
+ },  
+ startAt: Date, //开⼯时间  
+ endAt: Date, //竣⼯⽇期  
  
-封装 CURD 接⼝，实现 创建 ， 更新 ， 获取 ， 删除 接⼝ 实现以下⽹络请求接⼝
-POST /api/projects // 创建⼀条projects信息
-GET /api/projects/:id // 获取指定id的project信息
-PUT /api/projects/:id // 更新指定id的project信息
-DELETE /api/projects/:id // 删除指定id的project信息
-GET /api/projects // 获取所有projects信息
+封装 CURD 接⼝，实现 创建 ， 更新 ， 获取 ， 删除 接⼝ 实现以下⽹络请求接口   
+POST /api/projects // 创建⼀条projects信息   
+GET /api/projects/:id // 获取指定id的project信息   
+PUT /api/projects/:id // 更新指定id的project信息      
+DELETE /api/projects/:id // 删除指定id的project信息    
+GET /api/projects // 获取所有projects信息  
 
